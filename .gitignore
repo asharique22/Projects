@@ -1,0 +1,3 @@
+Trading_Engine/.env     # ignores only the .env inside Trading_Engine/
+__pycache__/            # ignores all __pycache__ folders anywhere
+*.py[cod]               # ignores compiled Python files (.pyc, .pyo, .pyd)
