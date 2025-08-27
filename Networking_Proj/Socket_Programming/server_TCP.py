@@ -1,29 +1,46 @@
 import socket
+import os
 
-# Create a TCP socket
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+def receive_data(sock):
+    header = sock.recv(128).decode('utf-8').strip()
+    parts = header.split("|")
 
-# Bind the socket to a specific address and port
-server_address = ('localhost', 12345)
-server_socket.bind(server_address)
+    if parts[0] == "TEXT":
+        size = int(parts[1])
+        data = sock.recv(size).decode('utf-8')
+        print("Client sent text:", data)
 
-# Listen for incoming connections
-server_socket.listen(1)
+        # Process and send back uppercase
+        response = data.upper()
+        sock.sendall(response.encode('utf-8'))
+        print("Sent back uppercase:", response)
 
-print('TCP server is waiting for connections...')
+    elif parts[0] == "FILE":
+        size = int(parts[1])
+        filename = parts[2]
+        print(f"Receiving file: {filename} ({size} bytes)")
 
-# Accept a connection
-client_socket, client_address = server_socket.accept()
-print('Connection from', client_address)
+        with open("received_" + filename, "wb") as f:
+            remaining = size
+            while remaining > 0:
+                chunk = sock.recv(min(4096, remaining))
+                if not chunk:
+                    break
+                f.write(chunk)
+                remaining -= len(chunk)
 
-# Receive data from the client, convert to uppercase, and send it back
-while True:
-    data = client_socket.recv(1024).decode('utf-8')
-    if not data:
-        break
-    modified_data = data.upper()
-    client_socket.send(modified_data.encode('utf-8'))
+        print(f"File saved as received_{filename}")
 
-# Close the connection
-client_socket.close()
-server_socket.close()
+if __name__ == "__main__":
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.bind(('localhost', 12345))
+    server_socket.listen(1)
+    print("TCP server is waiting for connections...")
+
+    conn, addr = server_socket.accept()
+    print("Connection from", addr)
+
+    receive_data(conn)
+
+    conn.close()
+    server_socket.close()
