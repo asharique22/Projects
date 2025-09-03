@@ -1,16 +1,18 @@
 Title,Author,Publisher,Year,ISBN,Status
-To Kill a Mockingbird,Harper Lee,Harper Perennial,1960,9.88E+12,Available
-1984,George Orwell,Signet Classic,1949,9.98E+12,Available
-Pride and Prejudice,Jane Austen,Penguin Classics,1813,8.88E+12,Available
-The Catcher in the Rye,J.D. Salinger,Little,0,7.98E+12,Available
-Moby Dick,Herman Melville,Harper & Brothers,1851,8.98E+12,Available
-War and Peace,Leo Tolstoy,The Russian Messenger,1869,6.98E+12,Available
-The Odyssey,Homer,Penguin Classics,-800,5.98E+12,Available
-Crime and Punishment,Fyodor Dostoevsky,The Russian Messenger,1866,9.50E+11,Available
-The Brothers Karamazov,Fyodor Dostoevsky,The Russian Messenger,1880,2.38E+12,Available
-Jane Eyre,Charlotte Brontë,Smith,0,3.28E+12,Available
-Wuthering Heights,Emily Brontë,Thomas Cautley Newby,1847,1.28E+12,Available
-Brave New World,Aldous Huxley,Harper Perennial,1932,2.18E+12,Available
-Fahrenheit 451,Ray Bradbury,Simon & Schuster,1953,1.38E+12,Available
-The Hobbit,J.R.R. Tolkien,Mariner Books,1937,3.18E+12,Available
-The tale of Two friend,Sharique Ahmad,IITK,9999,8.76E+14,Available
+The Catcher in the Rye,J.D. Salinger,Little,0,12,Available
+Pride and Prejudice,Jane Austen,Penguin Classics,1813,7,Available
+The Brothers Karamazov,Fyodor Dostoevsky,The Russian Messenger,1880,13,Available
+Fahrenheit 451,Ray Bradbury,Simon & Schuster,1953,15,Available
+Jane Eyre,Charlotte Brontë,Smith,0,8,Available
+To Kill a Mockingbird,Harper Lee,Harper Perennial,1960,16,Available
+War and Peace,Leo Tolstoy,The Russian Messenger,1869,3,Available
+1984,George Orwell,Signet Classic,1949,5,Available
+Crime and Punishment,Fyodor Dostoevsky,The Russian Messenger,1866,1,Available
+The Hobbit,J.R.R. Tolkien,Mariner Books,1937,9,Available
+Linear_Algebra,Sharique_Ahmad,IITK,2020,2,Available
+The Odyssey,Homer,Penguin Classics,-800,6,Available
+The tale of Two friend,Sharique Ahmad,IITK,9999,4,Available
+Moby Dick,Herman Melville,Harper & Brothers,1851,14,Available
+Brave New World,Aldous Huxley,Harper Perennial,1932,10,Available
+efer,rg,fgdv,2354,45665432456,Available
+Wuthering Heights,Emily Brontë,Thomas Cautley Newby,1847,11,Available

@@ -1,0 +1,7 @@
+Trading_Engine/.env
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+Trading_Engine/mode.pkl
